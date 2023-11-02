@@ -1,0 +1,42 @@
+FUNCTION PALANDROME(word:STRING,left,right:INTEGER) :BOOLEAN 
+VAR
+    
+BEGIN
+    IF (left>=right) THEN
+    RETURN true;
+        IF (wor[left=word[right]]) THEN
+        left:=left+1;
+        right:=right-1;
+        RETURN PALANDROME(word,left,right);
+        ELSE
+        RETURN false;
+
+
+
+        END_IF
+    END_IF
+END
+ALGORITHM recurcive
+
+VAR
+word:STRING;
+left,right:INTEGER;
+isPalindrome:BOOLEAN;
+
+
+
+    
+BEGIN
+
+write("give a word");
+read(word);
+left:=0;
+right:=word.length-1;
+isPalindrome := PALANDROME(word,left,right);
+IF (isPalindrome=true) THEN
+    write("your word"+word+"is palindrome");
+ELSE
+        write("your word"+word+"isn't palindrome");
+        
+END_IF
+END
